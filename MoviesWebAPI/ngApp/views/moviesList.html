@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <h1>Movie List</h1>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <select ng-model="movieList.selectedGenre"
+                ng-options="genre.name for genre in movieList.genres"
+                ng-change="movieList.getMovies()">
+        </select>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <ul>
+            <li ng-repeat="movie in movieList.movies">
+                {{movie.title}}
+            </li>
+        </ul>
+    </div>
+</div>
+
